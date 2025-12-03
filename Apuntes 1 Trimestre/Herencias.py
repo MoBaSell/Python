@@ -28,5 +28,5 @@ objeto3=Madre()
 objeto3.mostrar()
 
 objeto2=Hijo()
-objeto2.mostrar("Mensaje Extra")
+objeto2.mostrar("Mensaje Extra...")
 
