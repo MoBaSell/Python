@@ -32,10 +32,13 @@ class DiasdelaSemana:
         return self
 
     def __next__(self, stop=None):
-        if self.dia>=len(self.dias):
-            raise  StopIteration
+        #if self.dia>=len(self.dias):
+        #    raise  StopIteration
         dia_actual=self.dias[self.dia]
-        self.dia+=1
+        if self.dias == 6:
+            self.dia=0
+        else:
+            self.dia+=1
         return  dia_actual
 
 semana = DiasdelaSemana(1)
