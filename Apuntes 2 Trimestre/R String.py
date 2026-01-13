@@ -43,7 +43,7 @@ else:
 print()
 
 #validar matricula
-patron=r"[0-9]{4}[\s | - ]?[B-DF-HJ-NPR-TV-Z]{3}"
+patron=r"[0-9]{4}[\s|-]?[B-DF-HJ-NPR-TV-Z]{3}"
 
 patron=r"[^579]" #no que va detrás de ^ no es válido
 texto="0"
