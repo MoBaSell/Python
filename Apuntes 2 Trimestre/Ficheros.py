@@ -1,4 +1,6 @@
 #lectura
+from os import write
+
 try:    #Siempre con try catch
     fichero=open("Quijote.txt","rt") #Si usamos r debemos crear el fichero en la misma carpeta del script/en modo a (append) situa el cursor al final
 
@@ -54,5 +56,18 @@ try:
 except:
     print("Error al manipular el fichero")
 
+#lectura y cursor
+try:
+    fichero = open("Quijote.txt", "r+")
+    print(fichero.readline())
+    print("Despues de leer estoy aqui",fichero.tell()) #tell dice la linea
+    fichero.seek(fichero.tell()+10) #para moverse 10 posiciones desde mi posicion actual
+    print("Despues de moverme estoy aqui", fichero.tell())
+    fichero.write(("XXX"))
+    print("Despues de escribir estoy aqui", fichero.tell())
+    fichero.seek(0) #seek(0) para ir al inicio, seek(0,2) para ir al fin, seek(n) posicion n contando desde el principio
+    print("Despues de hacer seek estoy aqui",fichero.tell())
 
-
+    fichero.close()
+except:
+    print("Error al manipular el fichero")
