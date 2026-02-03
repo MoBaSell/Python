@@ -11,7 +11,7 @@ persona1 = Persona("Jose María")
 persona2 = Persona("Mohamed")
 
 try:
-    fichero = open("binario.bin","wb")
+    fichero = open("binario.bin", "wb")
     #pickle.dump(persona1,fichero) #buelca el contenido en el fichero
     #pickle.dump(persona2,fichero)
     lista=[]
@@ -21,7 +21,7 @@ try:
 
     fichero.close()
 
-    fichero = open("binario.bin","rb")
+    fichero = open("binario.bin", "rb")
     l = pickle.load(fichero) #carga el contenido del fichero
     for elemento in l:
         print(elemento.nombre)

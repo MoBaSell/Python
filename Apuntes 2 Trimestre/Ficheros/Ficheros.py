@@ -2,7 +2,7 @@
 from os import write
 
 try:    #Siempre con try catch
-    fichero=open("Quijote.txt","rt") #Si usamos r debemos crear el fichero en la misma carpeta del script/en modo a (append) situa el cursor al final
+    fichero=open("Quijote.txt", "rt") #Si usamos r debemos crear el fichero en la misma carpeta del script/en modo a (append) situa el cursor al final
 
     """
     linea=fichero.readline()
@@ -29,6 +29,7 @@ except:
 #escritura
 try:
     fichero = open("Quijote.txt", "wt")
+
     lista=["En un lugar de La Mancha\nde cuyo nombre\nno quiero acordarme..."]
     fichero.writelines(lista) #escribe las lineas de una lista
 
@@ -47,6 +48,7 @@ except:
 #append / añade al final del documento
 try:
     fichero = open("Quijote.txt", "at")
+
     fichero.write("En un lugar de La Mancha\n")
     fichero.write("de cuyo nombre\n")
     fichero.write("no quiero acordarme...\n")
@@ -59,6 +61,7 @@ except:
 #lectura y cursor
 try:
     fichero = open("Quijote.txt", "r+")
+
     print(fichero.readline())
     print("Despues de leer estoy aqui",fichero.tell()) #tell dice la linea
     fichero.seek(fichero.tell()+10) #para moverse 10 posiciones desde mi posicion actual
