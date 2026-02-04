@@ -1,0 +1,4 @@
+Pedo, Aitor: 5, 7
+Casitas, Armando: 4.5, 9
+Lega, Francisco: 8.5, 6.5, 6.3
+Ligro, Penélope: 1.1
